@@ -1,0 +1,7 @@
+da:
+  COMPARE_FIELDS:
+    DO_NOT_MATCH: "Feltet <strong>%s</strong> og <strong>%s</strong> er ikke ens."
+    
+en:
+  COMPARE_FIELDS:
+    DO_NOT_MATCH: "Feltet <strong>%s</strong> og <strong>%s</strong> er ikke ens."

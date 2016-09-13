@@ -1,7 +1,7 @@
 # Compare Form Fields Plugin
 
-The **Compare Form Fields** Plugin is for [Grav CMS](http://github.com/getgrav/grav).  This README.md file should be modified to describe the features, installation, configuration, and general usage of this plugin.
+The **Compare Form Fields** Plugin is for [Grav CMS](http://github.com/getgrav/grav).
 
 ## Description
 
-Compared 2 form fields
+This plugin was made to compare 2 very specific fields and was created specificly for Walbeck.dk

@@ -4,4 +4,4 @@ da:
     
 en:
   COMPARE_FIELDS:
-    DO_NOT_MATCH: "Feltet <strong>%s</strong> og <strong>%s</strong> er ikke ens."
+    DO_NOT_MATCH: "The field <strong>%s</strong> and <strong>%s</strong> do not match."

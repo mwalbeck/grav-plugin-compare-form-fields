@@ -10,6 +10,7 @@ use RocketTheme\Toolbox\Event\Event;
  * @package Grav\Plugin
  */
 class CompareFormFieldsPlugin extends Plugin {
+
     public static function getSubscribedEvents()
     {
         return [
@@ -29,16 +30,16 @@ class CompareFormFieldsPlugin extends Plugin {
 
         switch ($action) {
             case "compare_fields":
-                $this->CompareFields($form, $event);
+                $this->CompareFields($form, $event, $params);
                 break;
         }
     }
     
-    public function CompareFields($form, Event $event) {
-        if ($form->value("username") != $form->value("cvr")) {
+    public function CompareFields($form, Event $event, $params) {
+        if ($form->value($params["field1"]) != $form->value($params["field2"])) {
             $this->grav->fireEvent('onFormValidationError', new Event([
                 'form'    => $form,
-                'message' => $this->grav['language']->translate(['COMPARE_FIELDS.DO_NOT_MATCH', "CVR-nr.", "Gentag CVR-nr."])
+                'message' => $this->grav['language']->translate(['COMPARE_FIELDS.DO_NOT_MATCH', $form->label($params["field1"]), $form->label($params["field2"])])
             ]));
             $event->stopPropagation();
             return;

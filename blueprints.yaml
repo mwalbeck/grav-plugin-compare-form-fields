@@ -1,15 +1,13 @@
 name: Compare Form Fields
-version: 0.1.0
-description: Compared any 2 form fields
+version: 0.2.0
+description: Compare any 2 form fields
 icon: plug
 author:
   name: Magnus Walbeck
   email: admin@walbeck.dk
-homepage:
-demo:
-keywords: grav, plugin, etc
-bugs:
-readme:
+homepage: https://gitlab.com/mwalbeck/grav-plugin-compare-form-fields
+keywords: grav, plugin, compare, form, fields
+bugs: https://gitlab.com/mwalbeck/grav-plugin-compare-form-fields/issues
 license: MIT
 
 form:

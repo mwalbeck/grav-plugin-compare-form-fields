@@ -27,19 +27,22 @@ class CompareFormFieldsPlugin extends Plugin {
         $form = $event["form"];
         $action = $event["action"];
         $params = $event["params"];
+        $blueprints = $form->toArray();
 
         switch ($action) {
             case "compare_fields":
-                $this->CompareFields($form, $event, $params);
+                $this->CompareFields($form, $event, $params, $blueprints);
                 break;
         }
     }
     
-    public function CompareFields($form, Event $event, $params) {
-        if ($form->value($params["field1"]) != $form->value($params["field2"])) {
+    public function CompareFields($form, Event $event, $params, $blueprints) {
+        $field1 = $params["field1"];
+        $field2 = $params["field2"];
+        if ($form->value($field1) != $form->value(field2)) {
             $this->grav->fireEvent('onFormValidationError', new Event([
                 'form'    => $form,
-                'message' => $this->grav['language']->translate(['COMPARE_FIELDS.DO_NOT_MATCH', $form->label($params["field1"]), $form->label($params["field2"])])
+                'message' => $this->grav['language']->translate(['COMPARE_FIELDS.DO_NOT_MATCH', $blueprints["fields"]["$field1"]["label"], $blueprints["fields"]["$field2"]["label"]])
             ]));
             $event->stopPropagation();
             return;

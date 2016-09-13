@@ -1,3 +1,9 @@
+# v0.2.1
+##  2016-09-13
+
+1. [](#bug)
+    * Fixed a bug where it didn't display the field names in the alert message when the 2 fields didn't match.
+
 # v0.2.0
 ##  2016-09-13
 

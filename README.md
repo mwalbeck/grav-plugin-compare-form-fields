@@ -13,4 +13,6 @@ To compare 2 fields you just add the **compare_fields** option in the process se
         field1: "name of first field"
         field2: "name of second field"
 
+## License
+
 This plugin is licensed under The MIT license.
